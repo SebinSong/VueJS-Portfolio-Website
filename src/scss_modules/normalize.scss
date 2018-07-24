@@ -1,0 +1,50 @@
+*, *:after, *:before {
+  padding: 0; margin: 0;
+  box-sizing: border-box;
+}
+
+ul{
+  list-style: none;
+}
+button {
+  background: none; border: none;
+  cursor: pointer;
+
+  &:focus {
+    outline: none;
+  }
+}
+
+a {
+  text-decoration: none;
+}
+
+html {
+    overflow: hidden;
+}
+
+html, body {
+  width: 100%; height: 100%;
+}
+
+body {
+  $line1 : rgba(0,0,0,0.05);
+  $line2 : rgba(0,0,0,.1);
+  background:
+    repeating-linear-gradient(to right, transparent 0px, transparent 97px,
+    $line1 97px, $line1 100px),
+    repeating-linear-gradient(to bottom, transparent 0px, transparent 97px,
+    $line1 97px, $line1 100px),
+    repeating-linear-gradient(to right, transparent 0px, transparent 19px,
+    $line2 20px),
+    repeating-linear-gradient(to bottom, transparent 0px, transparent 19px,
+    $line2 20px),
+    linear-gradient(135deg, rgba(171,178,35,1) 0%,
+    rgba(62,127,25,1) 50%,rgba(1,145,142,1) 100%);
+
+    position: relative;
+
+    @media screen and (max-width: 600px){
+      overflow: hidden;
+    }
+}
