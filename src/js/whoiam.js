@@ -5,7 +5,7 @@ export default [
   },
   {
     "title": "I'm a Javascript enthusiast",
-    "description": "I have a fundamental understanding of html/css/es6 and love getting my hands dirty with vanilla javascript."
+    "description": "I have a solid understanding of html/css/es6 and love getting my hands dirty with vanilla javascript."
   },
   {
     "title": "I also love using SASS",
@@ -13,15 +13,20 @@ export default [
   },
   {
     "title": "I can create a SPA using Vue.js",
-    "description": "I'm familiar with the fundamental concept of JS framework and personally love how vue-router makes structuring a chunk of components a breeze."
+    "description": "I'm skilled at making use of Vue-router and Vuex for my project and personally love how Vuex makes data exchange between vue components a breeze."
   },
   {
-    "title": "I have a basic knowledge of Webpack and NPM.",
-    "description": "I can install,update and remove dependencies I need using NPM and also use webpack to configurate various loaders needed for my project."
+    "title": "I have a project experience of a RESTful API",
+    "description": "I know how to communicate with a REST api using Promise, JS native Fetch Api or Axios."
   },
   {
-    "title": "I'm currently into SVG and HTML5 Canvas",
-    "description": "I've always been fascinated by animations that are beautifully rendered on the web and I enjoy learning how to create them with SVG and Canvas."
+    "title": "I'm familiar with Webpack, NPM and Git/Github",
+    "description": "I can install,update and remove dependencies using NPM and also use webpack to configure various loaders needed for my project."
+  },
+  {
+    "title": "I'm into SVG and HTML5 Canvas",
+    "description":
+    "It's always exciting for me to see, learn and create fascinating animations on the web with SVG and Canvas. I'm also capable of utilizing D3.js and Tweenmax.js"
   },
   {
     "title": "I can't wait to be part of your developer team",

@@ -15,7 +15,7 @@
 </template>
 <script>
   import svgSetting from '@/js/contactsvg.js';
-  import canvasSetting from '@/js/canvasbg';
+  import {canvasSetting, cancelCanvasAnimation } from '@/js/canvasbg';
   import { TweenMax } from 'gsap/TweenMax';
 
   export default {
@@ -35,7 +35,8 @@
       canvasSetting(this.$el,
                     this.$el.querySelector("canvas.canvas_contact"),
                     true);
-    }
+    },
+    beforeDestroy(){ cancelCanvasAnimation(); }
   };
 </script>
 <style lang="scss">

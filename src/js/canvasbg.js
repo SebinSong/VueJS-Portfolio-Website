@@ -1,4 +1,6 @@
-export default function canvasSetting(container, canvas, noani = false){
+let AnimationId = null;
+
+export function canvasSetting(container, canvas, noani = false){
   const c = canvas.getContext("2d");
   const mouse = { x: null, y: null };
   let circles = [], randomPoints = [];
@@ -146,7 +148,7 @@ export default function canvasSetting(container, canvas, noani = false){
 
 
   function animate(){
-    window.requestAnimationFrame(animate);
+    AnimationId = window.requestAnimationFrame(animate);
     c.clearRect(0, 0, canvas.width, canvas.height);
 
     circles.forEach( circle => {
@@ -182,3 +184,8 @@ export default function canvasSetting(container, canvas, noani = false){
   }
 
 };
+
+
+export function cancelCanvasAnimation(){
+  window.cancelAnimationFrame(AnimationId);
+}

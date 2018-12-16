@@ -17,7 +17,7 @@
 </template>
 <script>
   import dataset from '@/js/whoiam';
-  import canvasSetting from '@/js/canvasbg';
+  import { canvasSetting, cancelCanvasAnimation } from '@/js/canvasbg';
   import { TweenMax } from 'gsap/TweenMax';
 
   export default {
@@ -82,8 +82,9 @@
                         this.$el.querySelector("canvas.canvas_whoiam"));
         }
       });
-      
-    }
+
+    },
+    beforeDestory(){ cancelCanvasAnimation(); }
   };
 </script>
 <style lang="scss">

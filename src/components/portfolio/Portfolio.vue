@@ -12,19 +12,34 @@
       <img :src="'@/../static/' + imgs[currentIndex]" alt="preview picture" />
     </div>
     <div class="explanation ani">
-      <p class="description"><span>Description</span> : <br class="lb" />{{ dataArr[currentIndex].description }}</p>
-      <p class="completedon"><span>Completed On</span> : <br class="lb" />{{ dataArr[currentIndex].completedon }}</p>
-      <p class="lastupdatedon"><span>Last Updated On</span> : <br class="lb" />{{ dataArr[currentIndex].lastupdatedon }}</p>
-      <p class="tech"><span>Tech Used</span> : <br class="lb" />{{ dataArr[currentIndex].tech }}</p>
-      <p class="cons"><span>Cons</span> : <br class="lb" />{{ dataArr[currentIndex].cons }}</p>
-      <p class="link"><span>Link</span> : <a class="checkout" :href="dataArr[currentIndex].link" target="_blank">Check Out</a></p>
+      <p class="description"
+         v-if="dataArr[currentIndex].hasOwnProperty('description')"
+      ><span>Description</span> : <br class="lb" />{{ dataArr[currentIndex].description }}</p>
+      <p class="completedon"
+         v-if="dataArr[currentIndex].hasOwnProperty('completedon')"
+      ><span>Completed On</span> : <br class="lb" />{{ dataArr[currentIndex].completedon }}</p>
+      <p class="lastupdatedon"
+         v-if="dataArr[currentIndex].hasOwnProperty('lastupdatedon')"
+      ><span>Last Updated On</span> : <br class="lb" />{{ dataArr[currentIndex].lastupdatedon }}</p>
+      <p class="tech"
+         v-if="dataArr[currentIndex].hasOwnProperty('tech')"
+      ><span>Tech Used</span> : <br class="lb" />{{ dataArr[currentIndex].tech }}</p>
+      <p class="cons"
+         v-if="dataArr[currentIndex].hasOwnProperty('cons')"
+      ><span>Cons</span> : <br class="lb" />{{ dataArr[currentIndex].cons }}</p>
+      <p class="link"
+         v-if="dataArr[currentIndex].hasOwnProperty('link')"
+      ><span>Link</span> : <a class="checkout" :href="dataArr[currentIndex].link" target="_blank">Check Out</a></p>
+      <p class="github"
+         v-if="dataArr[currentIndex].hasOwnProperty('github')"
+      ><span>Github Repo</span> : <a class="checkout" :href="dataArr[currentIndex].github" target="_blank">Check Out</a></p>
     </div>
   </content>
 </div>
 </template>
 <script>
   import dataset from '@/js/texts_portfolio';
-  import canvasSetting from '@/js/canvasbg';
+  import { canvasSetting, cancelCanvasAnimation } from '@/js/canvasbg';
   import { TweenMax } from 'gsap/TweenMax';
 
   export default {
@@ -35,7 +50,7 @@
         dataArr: null,
         itemsToAnimate: null,
         animationOn: false,
-        imgs: [ "cssanimationstorage_preview.jpg", "dtweatherwidget_preview.jpg",
+        imgs: [ "zigzagchatroom_preview.jpg", "cssanimationstorage_preview.jpg", "dtweatherwidget_preview.jpg",
                 "articleviewer_preview.jpg", "rqm_preview.jpg" ]
       };
     },
@@ -50,7 +65,6 @@
         }
       },
       next(){
-        console.log("animationOn: ", this.animationOn);
         if(this.currentIndex == (this.dataArr.length - 1) ||
            this.animationOn) return;
         else {
@@ -92,7 +106,8 @@
 
       canvasSetting(this.$el,
                     this.$el.querySelector("canvas.canvas_portfolio"));
-    }
+    },
+    beforeDestroy(){ cancelCanvasAnimation(); }
   };
 </script>
 <style lang="scss">

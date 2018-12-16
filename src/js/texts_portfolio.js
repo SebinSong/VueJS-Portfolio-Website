@@ -1,5 +1,16 @@
 export default [
   {
+    "title": "Zigzag Chatroom",
+    "completedon": "Aug 9th, 2018",
+    "lastupdatedon": "Aug 9th, 2018",
+    "tech": "SASS, Vue.js",
+    "description": "This is a small project that I did as a part of the interview process I had for a company called 'ZigZag', where I was required to create a little chatroom-like UI using a JS Framework of my choice(This work resulted in me getting to the next round of the process).",
+    "bestviewedon": "chrome PC",
+    "cons": "No responsive design done",
+    "link": "https://sebinsong.github.io/zigzag-assignment/",
+    "github": "https://github.com/SebinSong/zigzag-assignment"
+  },
+  {
     "title": "CSS Animation Storage",
     "completedon": "Feb 15th, 2018",
     "lastupdatedon": "Feb 18th 2018",
@@ -7,7 +18,8 @@ export default [
     "description": "A collection of simple animations purely created with CSS3. It was created in an attempt to get a deep grasp on CSS3 Animation",
     "bestviewedon": "chrome PC",
     "cons": "Doesn't work on IE",
-    "link": "https://sebinsong.github.io/CSS-Animation-Storage/"
+    "link": "https://sebinsong.github.io/CSS-Animation-Storage/",
+    "github": 'https://github.com/SebinSong/CSS-Animation-Storage'
   },
   {
     "title": "DT-Weather Widget",
@@ -17,7 +29,8 @@ export default [
     "description": "A draggable/throwable weather widget that automatically detects your position and tells the weather in the region. It was created in an attempt to grasp simple AJAX task using ES6 Promise.",
     "bestviewedon": "chrome PC",
     "cons": "Doesn't work on IE, Poor responsive design",
-    "link": "https://sebinsong.github.io/DT-WeatherWidget/"
+    "link": "https://sebinsong.github.io/DT-WeatherWidget/",
+    "github": "https://github.com/SebinSong/DT-WeatherWidget"
   },
   {
     "title": "Article Viewer",
@@ -27,7 +40,8 @@ export default [
     "description": "A viewer that displays some articles by emulating the behaviour of a book. It was created using CSS 3D transform features and Javascript.",
     "bestviewedon": "chrome PC",
     "cons": "Doesn't work on mobile devices and IE",
-    "link": "https://sebinsong.github.io/Article-Viewer/"
+    "link": "https://sebinsong.github.io/Article-Viewer/",
+    "github": "https://github.com/SebinSong/Article-Viewer",
   },
   {
     "title": "Random Quoute Machine",

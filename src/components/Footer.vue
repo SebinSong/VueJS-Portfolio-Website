@@ -1,6 +1,6 @@
 <template>
   <footer>
-    <p>Last updated on <br class="lb"/>24th Jul, 2018</p>
+    <p>Last updated on <br class="lb"/>16th Dec, 2018</p>
     <div class="info" @click="infoOn = true"><span>INFO <i class="fas fa-info-circle"></i></span></div>
     <div class="infobox" :class="{active: infoOn}">
       <p class="text">This SPA is created using <span class="tech">Vue.js</span> , <span class="tech">SASS</span> , <span class="tech">SVG</span> , <span class="tech">html5 Canvas</span> , and <span class="tech">GSAP TweenMax</span> Library.</p>

@@ -8,7 +8,7 @@ import Contact from '@/components/contact/Contact';
 
 Vue.use(Router)
 
-export default new Router({
+export let router = new Router({
   // mode: "history",
   routes: [
     {
@@ -30,5 +30,12 @@ export default new Router({
 })
 
 /*
-  history mode must be set for using vue-router in stupid IE
+  history mode must be set for using vue-router in IE ??
 */
+
+router.beforeEach((to, from, next) => {
+
+  if(to.matched.length === 0) next(false);
+  else next();
+
+});
