@@ -1,21 +1,13 @@
-# portfolio
+#Portfolio Website-Sebin Song.
 
-> A Vue.js project
+Personal Portfolio Website created using Vue.js. (SASS/SVG/Canvas/Greensock TweenMax)
 
-## Build Setup
+I used Vue-Cli + Vue-Router as the developing tools.
 
-``` bash
-# install dependencies
-npm install
+Inline SVG and HTML5 Canvas are responsible for the animations going on.
 
-# serve with hot reload at localhost:8080
-npm run dev
+Greensock TweenMax Library was used for rendering the SVG animations in all the modern browsers.
 
-# build for production with minification
-npm run build
+** Intro SVG animation is rendered well on mobile devices but not responsive to the viewport resizing.
 
-# build for production and view the bundle analyzer report
-npm run build --report
-```
-
-For a detailed explanation on how things work, check out the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
+Live Page Link: https://sebinsong.github.io/
