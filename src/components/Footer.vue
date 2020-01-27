@@ -1,6 +1,6 @@
 <template>
   <footer>
-    <p>Last updated on <br class="lb"/>16th Dec, 2018</p>
+    <p>Last updated on <br class="lb"/>{{ updateDate }}</p>
     <div class="info" @click="infoOn = true"><span>INFO <i class="fas fa-info-circle"></i></span></div>
     <div class="infobox" :class="{active: infoOn}">
       <p class="text">This SPA is created using <span class="tech">Vue.js</span> , <span class="tech">SASS</span> , <span class="tech">SVG</span> , <span class="tech">html5 Canvas</span> , and <span class="tech">GSAP TweenMax</span> Library.</p>
@@ -17,6 +17,17 @@
       return {
         infoOn: false
       };
+    },
+    computed: {
+      updateDate () {
+        const now = new Date()
+        return `${now.getDate()}, ${this.getReadableMonth(now.getMonth())}, ${now.getFullYear()}`
+      }
+    },
+    methods: {
+      getReadableMonth (num) {
+        return ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'][num]
+      }
     },
     mounted(){
       TweenMax.from( this.$el, 1, {
